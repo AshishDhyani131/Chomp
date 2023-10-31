@@ -137,65 +137,6 @@
   cursor: pointer;
 }
 
-.food-item {
-  display: flex;
-  gap: 3.6rem;
-  /* align-items: center; */
-  /* justify-content: start; */
-  border: 1.5px solid var(--clr-primary-100);
-  border-radius: 9px;
-  background-color: var(--clr-neutral-100);
-  padding: 3.2rem 3.2rem;
-  transition: border-color 0.3s;
-}
-.text-container {
-  width: 90%;
-}
-.food-heading-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.food-item:hover {
-  border: 1.5px solid var(--clr-primary-400);
-}
-.food-item img {
-  width: 128px;
-  height: 128px;
-  border-radius: 9px;
-}
-.btn--cart {
-  display: inline-block;
-
-  text-decoration: none;
-  font-size: 1.8rem;
-  font-weight: 300;
-  padding: 1.6rem 2.4rem;
-  border-radius: 9px;
-
-  /* Only necessary for .btn */
-  border: none;
-  cursor: pointer;
-  font-family: inherit;
-
-  /* Put transition on original "state" */
-  /* transition: background-color 0.3s; */
-  transition: all 0.3s;
-}
-.cart-count {
-  height: 50px;
-  width: 60px;
-  padding: 16px 12px;
-  border-radius: 9px;
-  border: 1px solid #ddd;
-  background-color: #fafafa;
-}
-
-.cart-count:active,
-.cart-count:focus {
-  border: 1px solid var(--clr-primary-100);
-}
-
 .menu-footer-container {
   display: flex;
   align-items: center;
