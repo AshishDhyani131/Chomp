@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Chomp-Webflow Ecommerce platform</title>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+  <body>
+    <custom-header data-id="1"></custom-header>
+    <main>
+      <section class="hero-section">
+        <div class="hero container container even-columns pt-900">
+          <div class="hero-text-box">
+            <h1
+              class="fs-primary-heading fw-700 text-neutral-900 letter-spacing-primary mr-100"
+            >
+              Beautiful food & takeaway,
+              <span class="text-primary-600">delivered</span> to your door.
+            </h1>
+            <p class="mt-400 fs-300">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500.
+            </p>
+
+            <a href="#" class="btn btn--primary mt-500">Place an order</a>
+
+            <div class="mt-300">
+              <img
+                src="logos/trustpilot-logo.svg"
+                alt="Trustpilot logo"
+                class="trustpilot-logo"
+              />
+
+              <p class="mt-100 fs-200 fw-400 text-neutral-900">
+                <span class="text-primary-600">4.8 out of 5</span> based on
+                2000+ reviews
+              </p>
+            </div>
+          </div>
+          <div class="hero-img-box">
+            <img src="img/home/hero-img.png" alt="hero image" />
+          </div>
+        </div>
+      </section>
+      <section class="about-section mt-1200 p-300">
+        <div class="about-us container even-columns py-1200">
+          <div class="about-text-box">
+            <h2
+              class="fs-secondary-heading fw-600 text-primary-600 letter-spacing-secondary h-scale"
+            >
+              The home of fresh products
+            </h2>
+            <p class="mt-400 fs-300 pr-300">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500.
+            </p>
+            <a href="#" class="btn btn--primary mt-500">Learn about us</a>
+          </div>
+          <div class="about-img-box">
+            <img src="img/home/about-us.png" alt="image about us" />
+          </div>
+        </div>
+      </section>
+      <section class="how-section mt-1200 pt-600 container">
+        <h2
+          class="how-heading fs-secondary-heading fw-600 text-primary-600 letter-spacing-secondary h-scale"
+        >
+          How it works.
+        </h2>
+        <ol role="list" class="steps-container mt-800">
+          <li class="step-01">
+            <div class="step-img-box pl-400">
+              <img src="img/home/step-01.png" class="img-step" alt="step-01" />
+            </div>
+            <div class="step-text-box mt-500 py-300 px-500">
+              <h3
+                class="fs-tertiary-heading letter-spacing-tertiary fw-600 text-neutral-900"
+              >
+                Adapt your menu items
+              </h3>
+              <p class="fs-300 mt-200">
+                Easily adapt your menu using the webflow CMS and allow customers
+                to browse your items.
+              </p>
+            </div>
+          </li>
+          <li class="step-02">
+            <div class="step-img-box pl-400">
+              <img src="img/home/step-02.png" class="img-step" alt="step-02" />
+            </div>
+            <div class="step-text-box mt-500 py-300">
+              <h3
+                class="fs-tertiary-heading letter-spacing-tertiary fw-600 text-neutral-900"
+              >
+                Accept online orders & takeout
+              </h3>
+              <p class="fs-300 mt-200">
+                Let your customers order and pay via the powerful ecommerce
+                system, or simple let them call your store.
+              </p>
+            </div>
+          </li>
+          <li class="step-03">
+            <div class="step-img-box pl-400">
+              <img src="img/home/step-03.png" class="img-step" alt="step-03" />
+            </div>
+            <div class="step-text-box mt-500 py-300">
+              <h3
+                class="fs-tertiary-heading letter-spacing-tertiary fw-600 text-neutral-900"
+              >
+                Manage delivery or takeout
+              </h3>
+              <p class="fs-300 mt-200 px-500">
+                Manage your own logistics and take orders simply through the
+                ecommerce system.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </section>
+      <section class="menu-section mt-1200 pt-600">
+        <div class="container">
+          <header class="menu-heading-container">
+            <h2
+              class="fs-secondary-heading fw-600 text-primary-600 letter-spacing-secondary h-scale"
+            >
+              Browse our menu
+            </h2>
+            <div class="fs-300 mt-300">
+              <p>
+                Use our menu to place an order online, or
+                <a href="tel:12835342544" class="tel-link text-primary-600"
+                  >phone</a
+                >
+                our store to <br />
+                place a pickup order. Fast and fresh food.
+              </p>
+            </div>
+          </header>
+          <main class="menu-main-container mx-300 my-500">
+            <div class="search-container pt-400">
+              <form action="" class="search-bar">
+                <input
+                  type="text"
+                  class="search-field"
+                  placeholder="Search for food!!"
+                  name="q"
+                />
+                <button type="submit" class="search-btn">
+                  <svg class="search-icon">
+                    <use href="logos/icons.svg#icon-search"></use>
+                  </svg>
+                </button>
+              </form>
+            </div>
+            <div class="even-columns gap my-600">
+              <div class="food-item">
+                <img src="img/burgers/burger-1.png" alt="food-img" />
+
+                <div class="text-container">
+                  <div class="food-heading-container">
+                    <h3
+                      class="fs-tertiary-heading fw-500 text-neutral-900 letter-spacing-tertiary"
+                    >
+                      Burger Dreams
+                    </h3>
+                    <span class="text-primary-600 fs-200">$ 9.20 USD</span>
+                  </div>
+                  <p class="fs-200 mt-300">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry.
+                  </p>
+                  <form action="" class="mt-200">
+                    <input
+                      type="number"
+                      name="quantity"
+                      value="1"
+                      min="1"
+                      class="cart-count fs-200 mr-200"
+                    />
+                    <a href="#" class="btn--cart btn--primary">Add to cart</a>
+                  </form>
+                </div>
+              </div>
+              <div class="food-item">
+                <img src="img/burgers/burger-2.png" alt="food-img" />
+
+                <div class="text-container">
+                  <div class="food-heading-container">
+                    <h3
+                      class="fs-tertiary-heading fw-500 text-neutral-900 letter-spacing-tertiary"
+                    >
+                      Burger Dreams
+                    </h3>
+                    <span class="text-primary-600 fs-200">$ 9.20 USD</span>
+                  </div>
+                  <p class="fs-200 mt-300">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry.
+                  </p>
+                  <form action="" class="mt-200">
+                    <input
+                      type="number"
+                      name="quantity"
+                      value="1"
+                      min="1"
+                      class="cart-count fs-200 mr-200"
+                    />
+                    <a href="#" class="btn--cart btn--primary">Add to cart</a>
+                  </form>
+                </div>
+              </div>
+              <div class="food-item">
+                <img src="img/burgers/burger-3.png" alt="food-img" />
+
+                <div class="text-container">
+                  <div class="food-heading-container">
+                    <h3
+                      class="fs-tertiary-heading fw-500 text-neutral-900 letter-spacing-tertiary"
+                    >
+                      Burger Dreams
+                    </h3>
+                    <span class="text-primary-600 fs-200">$ 9.20 USD</span>
+                  </div>
+                  <p class="fs-200 mt-300">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry.
+                  </p>
+                  <form action="" class="mt-200">
+                    <input
+                      type="number"
+                      name="quantity"
+                      value="1"
+                      min="1"
+                      class="cart-count fs-200 mr-200"
+                    />
+                    <a href="#" class="btn--cart btn--primary">Add to cart</a>
+                  </form>
+                </div>
+              </div>
+              <div class="food-item">
+                <img src="img/burgers/burger-4.png" alt="food-img" />
+
+                <div class="text-container">
+                  <div class="food-heading-container">
+                    <h3
+                      class="fs-tertiary-heading fw-500 text-neutral-900 letter-spacing-tertiary"
+                    >
+                      Burger Dreams
+                    </h3>
+                    <span class="text-primary-600 fs-200">$ 9.20 USD</span>
+                  </div>
+                  <p class="fs-200 mt-300">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry.
+                  </p>
+                  <form action="" class="mt-200">
+                    <input
+                      type="number"
+                      name="quantity"
+                      value="1"
+                      min="1"
+                      class="cart-count fs-200 mr-200"
+                    />
+                    <a href="#" class="btn--cart btn--primary">Add to cart</a>
+                  </form>
+                </div>
+              </div>
+              <div class="food-item">
+                <img src="img/burgers/burger-5.png" alt="food-img" />
+
+                <div class="text-container">
+                  <div class="food-heading-container">
+                    <h3
+                      class="fs-tertiary-heading fw-500 text-neutral-900 letter-spacing-tertiary"
+                    >
+                      Burger Dreams
+                    </h3>
+                    <span class="text-primary-600 fs-200">$ 9.20 USD</span>
+                  </div>
+                  <p class="fs-200 mt-300">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry.
+                  </p>
+                  <form action="" class="mt-200">
+                    <input
+                      type="number"
+                      name="quantity"
+                      value="1"
+                      min="1"
+                      class="cart-count fs-200 mr-200"
+                    />
+                    <a href="#" class="btn--cart btn--primary">Add to cart</a>
+                  </form>
+                </div>
+              </div>
+              <div class="food-item">
+                <img src="img/burgers/burger-6.png" alt="food-img" />
+
+                <div class="text-container">
+                  <div class="food-heading-container">
+                    <h3
+                      class="fs-tertiary-heading fw-500 text-neutral-900 letter-spacing-tertiary"
+                    >
+                      Burger Dreams
+                    </h3>
+                    <span class="text-primary-600 fs-200">$ 9.20 USD</span>
+                  </div>
+                  <p class="fs-200 mt-300">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry.
+                  </p>
+                  <form action="" class="mt-200">
+                    <input
+                      type="number"
+                      name="quantity"
+                      value="1"
+                      min="1"
+                      class="cart-count fs-200 mr-200"
+                    />
+                    <a href="#" class="btn--cart btn--primary">Add to cart</a>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </main>
+
+          <footer class="menu-footer-container mt-500">
+            <a href="#" class="btn btn--primary">See Full Menu</a>
+          </footer>
+        </div>
+      </section>
+      <section class="faq-section mt-1200">
+        <div class="container even-columns">
+          <div class="faq-img-box">
+            <img
+              src="logos/pattern.svg"
+              alt="pattern-svg"
+              class="faq-pattern"
+            />
+            <img src="img/home/faq.png" alt="FAQ" class="faq-img" />
+          </div>
+          <div class="faq-text-box">
+            <h2
+              class="fs-secondary-heading fw-600 text-primary-600 letter-spacing-secondary h-scale"
+            >
+              Order online with our simple checkout.
+            </h2>
+            <p class="fs-300 mt-400">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500.
+            </p>
+            <a href="#" class="btn btn--primary mt-600">See our FAQ</a>
+          </div>
+        </div>
+      </section>
+      <section class="order-section mt-1200 mx-500 even-columns">
+        <div class="order-img-box">
+          <img src="img/home/food-order.png" alt="food image" />
+        </div>
+        <div class="order-text-box pl-800 pr-1000">
+          <h2
+            class="fs-secondary-heading fw-600 text-neutral-100 letter-spacing-secondary h-scale"
+          >
+            <span class="text-primary-800"> Support </span>
+            good food and local business.
+          </h2>
+
+          <a href="#" class="btn btn-cta mt-600">Order Now</a>
+        </div>
+      </section>
+    </main>
+    <custom-footer></custom-footer>
+
+    <script src="components/custom-header.js"></script>
+    <script src="components/custom-footer.js"></script>
+  </body>
+</html>
