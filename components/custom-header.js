@@ -67,7 +67,6 @@ class customHeader extends HTMLElement {
     // const target = this.shadowRoot.querySelector(
     //   `#${this.getAttribute("data-id")}`
     // );
-    console.log(this.shadowRoot);
   }
   // updatePage(event) {
   //   const target = event.target;

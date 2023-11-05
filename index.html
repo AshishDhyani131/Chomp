@@ -155,7 +155,7 @@
           </header>
           <main class="menu-main-container mx-300 my-500">
             <div class="search-container pt-400">
-              <form action="" class="search-bar">
+              <form action="" class="search-bar" id="search-bar">
                 <input
                   type="text"
                   class="search-field"
@@ -169,13 +169,50 @@
                 </button>
               </form>
             </div>
-            <div class="even-columns gap my-600">
-              <food-card></food-card>
-              <food-card></food-card>
-              <food-card></food-card>
-              <food-card></food-card>
-              <food-card></food-card>
-              <food-card></food-card>
+            <div class="even-columns gap my-600" id="food-items-container">
+              <food-card source="/img/burgers/burger-1.png"
+                ><div slot="item-name">Burger Dreams</div>
+                <div slot="item-price">$9.20 USD</div>
+                <div slot="item-description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </div></food-card
+              >
+              <!--
+              <food-card source="/img/burgers/burger-2.png"
+                ><div slot="item-name">Burger Waldo</div>
+                <div slot="item-price">$9.70 USD</div>
+                <div slot="item-description">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                </div></food-card
+              >
+              <food-card source="/img/burgers/burger-3.png"
+                ><div slot="item-name">Burger Cali</div>
+                <div slot="item-price">$8.00 USD</div>
+                <div slot="item-description">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod
+                </div></food-card
+              >
+              <food-card source="/img/burgers/burger-4.png"
+                ><div slot="item-name">Burger Bacon Buddy</div>
+                <div slot="item-price">$10.30 USD</div>
+                <div slot="item-description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. =
+                </div></food-card
+              >
+              <food-card source="/img/burgers/burger-5.png"
+                ><div slot="item-name">Burger Spicy</div>
+                <div slot="item-price">$8.80 USD</div>
+                <div slot="item-description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </div></food-card
+              >
+              <food-card source="/img/burgers/burger-6.png"
+                ><div slot="item-name">Burger Classic</div>
+                <div slot="item-price">$6.20 USD</div>
+                <div slot="item-description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+                </div></food-card
+              > -->
             </div>
           </main>
 
@@ -230,5 +267,6 @@
     <script src="components/custom-header.js"></script>
     <script src="components/custom-footer.js"></script>
     <script src="components/food-card.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

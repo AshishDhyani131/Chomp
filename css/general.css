@@ -823,3 +823,6 @@ p {
 .logo {
   width: 4.2rem;
 }
+.line-height-md {
+  line-height: 1.2;
+}

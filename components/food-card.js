@@ -27,6 +27,7 @@ templateCard.innerHTML = `
         width: 128px;
         height: 128px;
         border-radius: 9px;
+        
       }
       .btn--cart {
         display: inline-block;
@@ -55,20 +56,19 @@ templateCard.innerHTML = `
       }
     </style>
     <div class="food-item">
-        <img src="/img/burgers/burger-1.png" alt="food-img" />
+        <img src="" alt="food-img" />
 
         <div class="text-container">
           <div class="food-heading-container">
             <h3
-              class="fs-tertiary-heading fw-500 text-neutral-900 letter-spacing-tertiary"
+              class="fs-tertiary-heading fw-500 text-neutral-900 letter-spacing-tertiary line-height-md"
             >
-              Burger Dreams
+              <slot name="item-name"/>
             </h3>
-            <span class="text-primary-600 fs-200">$ 9.20 USD</span>
+            <span class="text-primary-600 fs-200"><slot name="item-price"/></span>
           </div>
           <p class="fs-200 mt-300">
-            Lorem Ipsum is simply dummy text of the printing and
-            typesetting industry.
+            <slot name="item-description"/>
           </p>
           <form action="" class="mt-200">
             <input
@@ -87,6 +87,7 @@ class foodCard extends HTMLElement {
     super();
     this.attachShadow({ mode: "open" });
     this.shadowRoot.appendChild(templateCard.content.cloneNode(true));
+    this.shadowRoot.querySelector("img").src = this.getAttribute("source");
   }
 }
 window.customElements.define("food-card", foodCard);
