@@ -1,0 +1,34 @@
+.hero-heading {
+  text-align: center;
+}
+
+/* STATISTIC SECTION */
+.statistic-container {
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: radial-gradient(
+      circle farthest-corner at 50% 50%,
+      rgba(0, 0, 0, 0.67),
+      rgba(25, 26, 27, 0.19)
+    ),
+    url("/img/company/food-bg.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+.text-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: var(--sp-1000);
+}
+.statistic-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.statistic-count {
+  font-size: 7.6rem;
+  transform: scaleY(1.1);
+}

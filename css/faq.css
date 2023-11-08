@@ -1,0 +1,53 @@
+@import url(variables.css);
+.hero-heading {
+  text-align: center;
+}
+
+/* FAQ SECTION */
+.faq-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.faq-btn {
+  background-color: var(--clr-neutral-100);
+  border: 1px solid #999;
+}
+.faq-btn.faq-btn-primary {
+  background-color: var(--clr-primary-600);
+  background-image: var(--bg-img-primary);
+  color: var(--clr-neutral-100);
+  border: none;
+}
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  gap: var(--sp-300);
+  align-items: center;
+}
+.faq-list li {
+  width: 100%;
+}
+.faq-list li a {
+  color: var(--clr-primary-600);
+}
+.faq-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+ion-icon[name="add-circle-outline"] {
+  height: 32px;
+  width: 32px;
+  color: #999;
+  opacity: 0.5;
+}
+ion-icon[name="add-circle-outline"].rotate-45 {
+  transform: rotate(45deg);
+  opacity: 1;
+}
+.faq-text {
+  opacity: 0.7;
+}

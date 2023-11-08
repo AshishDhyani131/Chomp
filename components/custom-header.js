@@ -40,11 +40,11 @@ templateHeader.innerHTML = `
         </a>
         <nav>
             <ul role="list" class="main-nav-list fs-300">
-              <li><a id="1" class="main-nav-link nav-cta" href="#">Home</a></li>
-              <li><a id="2" class="main-nav-link" href="#">Order</a></li>
-              <li><a id="3" class="main-nav-link" href="#">Company</a></li>
-              <li><a id="4" class="main-nav-link" href="#">FAQ</a></li>
-              <li><a id="5" class="main-nav-link" href="#">Contact</a></li>
+              <li><a id="1" class="main-nav-link nav-cta" href="/index.html">Home</a></li>
+              <li><a id="2" class="main-nav-link" href="/order.html">Order</a></li>
+              <li><a id="3" class="main-nav-link" href="/company.html">Company</a></li>
+              <li><a id="4" class="main-nav-link" href="/faq.html">FAQ</a></li>
+              <li><a id="5" class="main-nav-link" href="/contact.html">Contact</a></li>
 
             </ul>
             <a href="#" class="class-container">

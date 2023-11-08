@@ -109,7 +109,7 @@ templateFooter.innerHTML = `
               </li>
             </ul>
           </div>
-          <div class="divider"></div>
+          <div class="divider my-900"></div>
           <div class="footer-bottom">
             <ul role="list" class="credit-links fs-200">
               <li>

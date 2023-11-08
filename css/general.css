@@ -137,6 +137,12 @@ p {
 .bg-primary-200 {
   background-color: var(--clr-primary-200);
 }
+.bg-primary-100 {
+  background-color: var(--clr-primary-100);
+}
+.bg-primary-50 {
+  background-color: var(--clr-primary-50);
+}
 
 .bg-neutral-900 {
   background-color: var(--clr-neutral-900);
@@ -698,40 +704,40 @@ p {
 }
 
 .p-1200 {
-  padding: var(--sp-1200) var(--sp-1200);
+  padding: var(--sp-1200);
 }
 .p-1100 {
-  padding: var(--sp-1100) var(--sp-1100);
+  padding: var(--sp-1100);
 }
 .p-1000 {
-  padding: var(--sp-1000) var(--sp-1000);
+  padding: var(--sp-1000);
 }
 .p-900 {
-  padding: var(--sp-900) var(--sp-900);
+  padding: var(--sp-900);
 }
 .p-800 {
-  padding: var(--sp-800) var(--sp-800);
+  padding: var(--sp-800);
 }
 .p-700 {
-  padding: var(--sp-700) var(--sp-700);
+  padding: var(--sp-700);
 }
 .p-600 {
-  padding: var(--sp-600) var(--sp-600);
+  padding: var(--sp-600);
 }
 .p-500 {
-  padding: var(--sp-500) var(--sp-500);
+  padding: var(--sp-500);
 }
 .p-400 {
-  padding: var(--sp-400) var(--sp-400);
+  padding: var(--sp-400);
 }
 .p-300 {
-  padding: var(--sp-300) var(--sp-300);
+  padding: var(--sp-300);
 }
 .p-200 {
-  padding: var(--sp-200) var(--sp-200);
+  padding: var(--sp-200);
 }
 .p-100 {
-  padding: var(--sp-100) var(--sp-100);
+  padding: var(--sp-100);
 }
 
 .bg-img {
@@ -818,7 +824,6 @@ p {
 
 .divider {
   border: 0.5px solid #e5f1f3;
-  margin: 9.6rem 0;
 }
 .logo {
   width: 4.2rem;

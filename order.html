@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/order.css" />
+    <title>Orders</title>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+  <body>
+    <custom-header></custom-header>
+    <main class="mb-1000">
+      <section class="hero-section bg-primary-50">
+        <h1
+          class="hero-heading fs-primary-heading fw-700 text-neutral-900 letter-spacing-primary p-1200"
+        >
+          Get your food <span class="text-primary-600"> delivered</span>,<br />
+          or <span class="text-primary-600"> pick-up</span> in store.
+        </h1>
+      </section>
+      <section class="menu-section mt-700 pt-600">
+        <div class="container">
+          <main class="menu-main-container">
+            <div class="search-container">
+              <form action="" class="search-bar" id="search-bar">
+                <input
+                  type="text"
+                  class="search-field"
+                  placeholder="Search for food!!"
+                  name="q"
+                />
+                <button type="submit" class="search-btn">
+                  <svg class="search-icon">
+                    <use href="logos/icons.svg#icon-search"></use>
+                  </svg>
+                </button>
+              </form>
+            </div>
+            <div class="even-columns gap my-600" id="food-items-container">
+              <food-card source="/img/burgers/burger-1.png"
+                ><div slot="item-name">Burger Dreams</div>
+                <div slot="item-price">$9.20 USD</div>
+                <div slot="item-description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </div></food-card
+              >
+
+              <food-card source="/img/burgers/burger-2.png"
+                ><div slot="item-name">Burger Waldo</div>
+                <div slot="item-price">$9.70 USD</div>
+                <div slot="item-description">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                </div></food-card
+              >
+              <food-card source="/img/burgers/burger-3.png"
+                ><div slot="item-name">Burger Cali</div>
+                <div slot="item-price">$8.00 USD</div>
+                <div slot="item-description">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod
+                </div></food-card
+              >
+              <food-card source="/img/burgers/burger-4.png"
+                ><div slot="item-name">Burger Bacon Buddy</div>
+                <div slot="item-price">$10.30 USD</div>
+                <div slot="item-description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. =
+                </div></food-card
+              >
+              <food-card source="/img/burgers/burger-5.png"
+                ><div slot="item-name">Burger Spicy</div>
+                <div slot="item-price">$8.80 USD</div>
+                <div slot="item-description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </div></food-card
+              >
+              <food-card source="/img/burgers/burger-6.png"
+                ><div slot="item-name">Burger Classic</div>
+                <div slot="item-price">$6.20 USD</div>
+                <div slot="item-description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+                </div></food-card
+              >
+            </div>
+          </main>
+
+          <footer class="menu-footer-container mt-500">
+            <a href="#" class="btn btn--primary">Next</a>
+          </footer>
+        </div>
+      </section>
+    </main>
+    <custom-footer></custom-footer>
+    <script src="components/custom-header.js"></script>
+    <script src="components/custom-footer.js"></script>
+    <script src="components/food-card.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
