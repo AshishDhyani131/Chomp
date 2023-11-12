@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <title>Document</title>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+  <body>
+    <div class="overlay-container">
+      <div class="modal-container">
+        <header class="pt-300 px-500">
+          <h1 class="text-neutral-900 fw-700 h-scale">Your Order</h1>
+
+          <button>
+            <ion-icon
+              name="close-outline"
+              class="text-neutral-900 close-btn"
+            ></ion-icon>
+          </button>
+        </header>
+        <div class="cart-divider mt-300"></div>
+        <ul role="list" class="cart-list mt-400 px-500">
+          <li class="cart-item">
+            <img src="img/burgers/burger-1.png" alt="food-item" />
+            <div class="cart-text-container">
+              <div class="cart-text fs-200 text-neutral-900">
+                <h3 class="cart-food fw-700">Burger Dreams</h3>
+                <p class="cart-price">$ 9.20 USD</p>
+                <button class="cart-remove">Remove</button>
+              </div>
+              <input
+                type="number"
+                name="quantity"
+                value="1"
+                min="1"
+                class="cart-count fs-200 mr-200"
+              />
+            </div>
+          </li>
+        </ul>
+        <div class="cart-divider"></div>
+        <footer class="cart-footer pt-300 pb-300 px-500">
+          <p class="fs-200">Subtotal</p>
+          <p class="cart-price fs-200 text-neutral-900 fw-600">$ 9.20 USD</p>
+          <a href="#" class="checkout-btn mt-100 fs-300 bg-primary-600"
+            ><p class="text-neutral-100 py-300">Proceed to checkout</p></a
+          >
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
