@@ -19,6 +19,7 @@
       nomodule=""
       src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
     ></script>
+    <script type="module" defer src="javascript/controller.js"></script>
   </head>
   <body>
     <custom-header></custom-header>
@@ -38,7 +39,9 @@
               ever since the 1500.
             </p>
 
-            <a href="#" class="btn btn--primary mt-500">Place an order</a>
+            <a href="#main-menu" class="btn btn--primary mt-500"
+              >Place an order</a
+            >
 
             <div class="mt-300">
               <img
@@ -135,93 +138,122 @@
           </li>
         </ol>
       </section>
-      <section class="menu-section mt-1200 pt-600">
-        <div class="container">
-          <header class="menu-heading-container">
-            <h2
-              class="fs-secondary-heading fw-600 text-primary-600 letter-spacing-secondary h-scale"
-            >
-              Browse our menu
-            </h2>
-            <div class="fs-300 mt-300">
-              <p>
-                Use our menu to place an order online, or
-                <a href="tel:12835342544" class="tel-link text-primary-600"
-                  >phone</a
+      <section class="menu-section mt-1200 mx-700">
+        <div class="menu-section-container">
+          <div class="container pt-600">
+            <header class="menu-heading-container">
+              <h2
+                class="fs-secondary-heading fw-600 text-primary-600 letter-spacing-secondary h-scale"
+              >
+                Browse our menu
+              </h2>
+              <div class="fs-300 mt-300">
+                <p>
+                  Use our menu to place an order online, or
+                  <a href="tel:12835342544" class="tel-link text-primary-600"
+                    >phone</a
+                  >
+                  our store to <br />
+                  place a pickup order. Fast and fresh food.
+                </p>
+              </div>
+            </header>
+            <main class="menu-main-container mx-300 my-500" id="main-menu">
+              <div class="search-container pt-400">
+                <form action="" class="search-bar" id="search-bar">
+                  <input
+                    type="text"
+                    class="search-field"
+                    placeholder="Search for food!!"
+                    name="q"
+                  />
+                  <button type="submit" class="search-btn">
+                    <svg class="search-icon">
+                      <use href="logos/icons.svg#icon-search"></use>
+                    </svg>
+                  </button>
+                </form>
+              </div>
+              <div
+                class="food-items-container even-columns gap my-600"
+                id="food-items-container"
+              >
+                <!-- <div class="spinner">
+                  <img src="logos/loading.svg" alt="laoding-spinner" />;
+                </div> -->
+                <!-- <food-card source="/img/burgers/burger-1.png"
+                  ><div slot="item-name">Burger Dreams</div>
+                  <div slot="item-price">$9.20 USD</div>
+                  <div slot="item-description">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  </div></food-card
                 >
-                our store to <br />
-                place a pickup order. Fast and fresh food.
-              </p>
-            </div>
-          </header>
-          <main class="menu-main-container mx-300 my-500">
-            <div class="search-container pt-400">
-              <form action="" class="search-bar" id="search-bar">
-                <input
-                  type="text"
-                  class="search-field"
-                  placeholder="Search for food!!"
-                  name="q"
-                />
-                <button type="submit" class="search-btn">
-                  <svg class="search-icon">
-                    <use href="logos/icons.svg#icon-search"></use>
-                  </svg>
-                </button>
-              </form>
-            </div>
-            <div class="even-columns gap my-600" id="food-items-container">
-              <food-card source="/img/burgers/burger-1.png"
-                ><div slot="item-name">Burger Dreams</div>
-                <div slot="item-price">$9.20 USD</div>
-                <div slot="item-description">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                </div></food-card
-              >
 
-              <food-card source="/img/burgers/burger-2.png"
-                ><div slot="item-name">Burger Waldo</div>
-                <div slot="item-price">$9.70 USD</div>
-                <div slot="item-description">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                </div></food-card
-              >
-              <food-card source="/img/burgers/burger-3.png"
-                ><div slot="item-name">Burger Cali</div>
-                <div slot="item-price">$8.00 USD</div>
-                <div slot="item-description">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod
-                </div></food-card
-              >
-              <food-card source="/img/burgers/burger-4.png"
-                ><div slot="item-name">Burger Bacon Buddy</div>
-                <div slot="item-price">$10.30 USD</div>
-                <div slot="item-description">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. =
-                </div></food-card
-              >
-              <food-card source="/img/burgers/burger-5.png"
-                ><div slot="item-name">Burger Spicy</div>
-                <div slot="item-price">$8.80 USD</div>
-                <div slot="item-description">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </div></food-card
-              >
-              <food-card source="/img/burgers/burger-6.png"
-                ><div slot="item-name">Burger Classic</div>
-                <div slot="item-price">$6.20 USD</div>
-                <div slot="item-description">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
-                </div></food-card
-              >
-            </div>
-          </main>
-
-          <footer class="menu-footer-container mt-500">
-            <a href="#" class="btn btn--primary">See Full Menu</a>
-          </footer>
+                <food-card source="/img/burgers/burger-2.png"
+                  ><div slot="item-name">Burger Waldo</div>
+                  <div slot="item-price">$9.70 USD</div>
+                  <div slot="item-description">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  </div></food-card
+                >
+                <food-card source="/img/burgers/burger-3.png"
+                  ><div slot="item-name">Burger Cali</div>
+                  <div slot="item-price">$8.00 USD</div>
+                  <div slot="item-description">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Quod
+                  </div></food-card
+                >
+                <food-card source="/img/burgers/burger-4.png"
+                  ><div slot="item-name">Burger Bacon Buddy</div>
+                  <div slot="item-price">$10.30 USD</div>
+                  <div slot="item-description">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. =
+                  </div></food-card
+                >
+                <food-card source="/img/burgers/burger-5.png"
+                  ><div slot="item-name">Burger Spicy</div>
+                  <div slot="item-price">$8.80 USD</div>
+                  <div slot="item-description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </div></food-card
+                >
+                <food-card source="/img/burgers/burger-6.png"
+                  ><div slot="item-name">Burger Classic</div>
+                  <div slot="item-price">$6.20 USD</div>
+                  <div slot="item-description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Ipsam
+                  </div></food-card
+                > -->
+              </div>
+            </main>
+          </div>
         </div>
+        <footer class="menu-footer-container mt-800">
+          <div class="pagination fs-400">
+            <!-- <button class="btn--inline pagination__btn--prev">
+              <ion-icon name="chevron-back-outline" class="p-200"></ion-icon>
+            </button>
+            <button class="btn--inline btn--inline--active">
+              <span class="py-200 px-300">1</span>
+            </button>
+            <button class="btn--inline">
+              <span class="py-200 px-300">2</span>
+            </button>
+            <button class="btn--inline">
+              <span class="py-200 px-300">3</span>
+            </button>
+            <button class="btn--inline">
+              <span class="py-200 px-300">4</span>
+            </button>
+            <button class="btn--inline pagination__btn--next">
+              <ion-icon name="chevron-forward-outline" class="p-200"></ion-icon>
+            </button> -->
+          </div>
+        </footer>
       </section>
+
       <section class="faq-section mt-1200">
         <div class="container even-columns">
           <div class="faq-img-box">
@@ -270,6 +302,5 @@
     <script src="components/custom-footer.js"></script>
     <script src="components/food-card.js"></script>
     <script src="components/custom-modal.js"></script>
-    <script src="script.js"></script>
   </body>
 </html>

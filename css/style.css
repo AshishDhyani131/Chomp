@@ -65,11 +65,9 @@
 
 /* MENU SECTION */
 
-.menu-section {
-  background-image: url(https://assets.website-files.com/5e865e09d8efa3310676b585/5e865e09d8efa3b4c076b5ee_BG%20Shape%20Content.svg);
-  background-position: 50% 50%;
-  background-size: 95% 95%;
-  background-repeat: no-repeat;
+.menu-section-container {
+  background-color: var(--clr-primary-50);
+  height: 1078px;
 }
 .menu-heading-container {
   display: flex;
@@ -81,7 +79,9 @@
 .menu-heading-container a {
   text-decoration-color: var(--clr-primary-600) !important;
 }
-
+.spinner {
+  justify-self: end;
+}
 .menu-main-container {
   background-color: #f5fbfc;
 }
@@ -142,7 +142,27 @@
   align-items: center;
   justify-content: center;
 }
-
+.pagination {
+  display: flex;
+  gap: 12px;
+}
+.btn--inline {
+  background-color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--clr-primary-100);
+  border-radius: 5px;
+  transition: all 0.2s;
+}
+.btn--inline:hover {
+  transform: scale(1.05);
+}
+.btn--inline.btn--inline--active {
+  border: 2px solid var(--clr-primary-600);
+  background-color: var(--clr-primary-600);
+  color: var(--clr-neutral-100);
+}
 /* FAQ SECTION */
 
 .faq-img-box {

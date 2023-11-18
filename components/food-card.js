@@ -30,6 +30,7 @@ templateCard.innerHTML = `
         
       }
       .btn--cart {
+        
         display: inline-block;
         text-decoration: none;
         font-size: 1.8rem;
@@ -70,7 +71,7 @@ templateCard.innerHTML = `
           <p class="fs-200 mt-300">
             <slot name="item-description"/>
           </p>
-          <form action="" class="mt-200">
+          <form id="cart-form" class="mt-200">
             <input
               type="number"
               name="quantity"
@@ -78,7 +79,7 @@ templateCard.innerHTML = `
               min="1"
               class="cart-count fs-200 mr-200"
             />
-            <a href="#" class="btn--cart btn--primary">Add to cart</a>
+            <button href="#" class="btn--cart btn--primary bg-primary-600 bg-img text-neutral-100">Add to cart</button>
           </form>
         </div>
     </div>`;
