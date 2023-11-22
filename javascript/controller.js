@@ -36,6 +36,6 @@ const init = function () {
   searchView.addHandlerSubmit(loadRecipes);
   paginationView.addHandlerClick(paginationRender);
   // foodCardView.addHandlerClick(overlayRender);
-  resultsView.addHandlerClick(overlayRender);
+  // resultsView.addHandlerClick(overlayRender);
 };
 init();
