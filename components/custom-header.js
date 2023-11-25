@@ -40,11 +40,11 @@ templateHeader.innerHTML = `
         </a>
         <nav>
             <ul role="list" class="main-nav-list fs-300">
-              <li><a id="1" class="main-nav-link nav-cta" href="/index.html">Home</a></li>
-              <li><a id="2" class="main-nav-link" href="/order.html">Order</a></li>
-              <li><a id="3" class="main-nav-link" href="/company.html">Company</a></li>
-              <li><a id="4" class="main-nav-link" href="/faq.html">FAQ</a></li>
-              <li><a id="5" class="main-nav-link" href="/contact.html">Contact</a></li>
+              <li><a id="index" class="main-nav-link" href="/index.html">Home</a></li>
+              <li><a id="order" class="main-nav-link" href="/order.html">Order</a></li>
+              <li><a id="company" class="main-nav-link" href="/company.html">Company</a></li>
+              <li><a id="faq" class="main-nav-link" href="/faq.html">FAQ</a></li>
+              <li><a id="contact" class="main-nav-link" href="/contact.html">Contact</a></li>
 
             </ul>
             <a href="#" class="class-container">
@@ -63,19 +63,14 @@ class customHeader extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
-    this.shadowRoot.appendChild(templateHeader.content.cloneNode(true));
-    // const target = this.shadowRoot.querySelector(
-    //   `#${this.getAttribute("data-id")}`
-    // );
   }
-  // updatePage(event) {
-  //   const target = event.target;
-  //   console.log(target);
-  // }
-  // connectedCallback() {
-  //   this.shadowRoot
-  //     .querySelector(".main-nav-list")
-  //     .addEventListener("click", this.updatePage);
-  // }
+  connectedCallback() {
+    this.shadowRoot.appendChild(templateHeader.content.cloneNode(true));
+    const pathName = window.location.pathname;
+    const match = pathName.match(/\/(\w+)\.html/);
+    if (match) {
+      this.shadowRoot.querySelector(`#${match[1]}`).classList.add("nav-cta");
+    }
+  }
 }
 window.customElements.define("custom-header", customHeader);

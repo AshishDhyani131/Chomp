@@ -2,8 +2,8 @@ import * as model from "./model.js";
 import resultsView from "./Views/resultsView.js";
 import searchView from "./Views/searchView.js";
 import paginationView from "./Views/paginationView.js";
-import foodCardView from "./Views/foodCardView.js";
-
+import overlayView from "./Views/overlayView.js";
+let cartItems = {};
 const loadRecipes = async function () {
   try {
     const query = searchView.fetchFoodItem();
@@ -30,12 +30,17 @@ const paginationRender = function (currPage) {
   paginationView.render(model.state.search);
 };
 
-const overlayRender = function () {};
+const overlayRender = function (detail) {
+  cartItems[`${detail.id}`] = detail.item;
+  overlayView.render(cartItems);
+};
 
 const init = function () {
   searchView.addHandlerSubmit(loadRecipes);
   paginationView.addHandlerClick(paginationRender);
-  // foodCardView.addHandlerClick(overlayRender);
-  // resultsView.addHandlerClick(overlayRender);
+  resultsView.addHandlerClick(overlayRender);
 };
 init();
+document.querySelector(".click").addEventListener("click", () => {
+  document.querySelector("custom-modal").open = true;
+});

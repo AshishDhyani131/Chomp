@@ -57,7 +57,7 @@ templateCard.innerHTML = `
       }
     </style>
     <div class="food-item">
-        <img src="" alt="food-img" />
+        <img id="food-img" alt="food-img" />
 
         <div class="text-container">
           <div class="food-heading-container">
@@ -83,12 +83,64 @@ templateCard.innerHTML = `
           </form>
         </div>
     </div>`;
-class foodCard extends HTMLElement {
+class FoodCard extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
+    this._updateCart = this._updateCart.bind(this);
+    this.imgElement = null;
+  }
+  static get observedAttributes() {
+    return ["source"];
+  }
+  attributeChangedCallback(attrName, oldValue, newValue) {
+    if (newValue !== oldValue) {
+      this._updateImageSource();
+    }
+  }
+  connectedCallback() {
     this.shadowRoot.appendChild(templateCard.content.cloneNode(true));
-    this.shadowRoot.querySelector("img").src = this.getAttribute("source");
+    this.imgElement = this.shadowRoot.querySelector("#food-img");
+    this._updateImageSource();
+    this.shadowRoot
+      .querySelector("#cart-form")
+      .addEventListener("submit", this._updateCart);
+  }
+  disconnectedCallback() {
+    this.shadowRoot
+      .querySelector("#cart-form")
+      .removeEventListener("submit", this._updateCart);
+  }
+  _updateCart(event) {
+    event.preventDefault();
+    const total = this.shadowRoot
+      .querySelector("#cart-form")
+      .querySelector("input").value;
+
+    const itemNameSlot = this.shadowRoot.querySelector(
+      'slot[name="item-name"]'
+    );
+    const itemPriceSlot = this.shadowRoot.querySelector(
+      'slot[name="item-price"]'
+    );
+
+    // Accessing the actual content within the slot
+    const itemName = itemNameSlot.assignedNodes()[0].innerText;
+    const itemPrice = itemPriceSlot.assignedNodes()[0].innerText;
+    const itemSrc = this.getAttribute("source");
+    const id = this.dataset.id;
+    const itemObj = {
+      id,
+      item: { total, itemName, itemPrice, itemSrc },
+    };
+    const submitEvent = new CustomEvent("formSubmit", { detail: itemObj });
+    document.querySelector(".food-items-container").dispatchEvent(submitEvent);
+    // this.dispatchEvent(submitEvent);
+  }
+  _updateImageSource() {
+    if (this.imgElement) {
+      this.imgElement.src = this.getAttribute("source");
+    }
   }
 }
-window.customElements.define("food-card", foodCard);
+window.customElements.define("food-card", FoodCard);

@@ -58,6 +58,9 @@ templateModal.innerHTML = `
             opacity: 0.4;
           }
           .cart-list {
+            display:flex;
+            flex-direction:column;
+            gap:1.6rem;
             min-height: 73%;
           }
           .cart-item {
@@ -118,19 +121,19 @@ templateModal.innerHTML = `
         </header>
         <div class="cart-divider mt-300"></div>
         <ul role="list" class="cart-list mt-400 px-500">
-          <li class="cart-item">
+          <li class="cart-item" data-id="">
             <img src="img/burgers/burger-1.png" alt="food-item" />
             <div class="cart-text-container">
               <div class="cart-text fs-200 text-neutral-900">
                 <h3 class="cart-food fw-700">Burger Dreams</h3>
-                <p class="cart-price">$ 9.20 USD</p>
+                <p class="price">$ 9.20 USD</p>
                 <button class="cart-remove">Remove</button>
               </div>
               <input
                 type="number"
                 name="quantity"
                 value="1"
-                min="1"
+                min="0"
                 class="cart-count fs-200 mr-200"
               />
             </div>
@@ -165,6 +168,7 @@ class modalCard extends HTMLElement {
   }
   connectedCallback() {
     this.shadowRoot.appendChild(templateModal.content.cloneNode(true));
+
     this.shadowRoot
       .querySelector(".close-btn")
       .addEventListener("click", this.close);
